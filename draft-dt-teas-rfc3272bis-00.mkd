@@ -177,7 +177,7 @@ informative:
         ins: C.J.R. Seidl
       -
         ins: W.F. Sewel
-    date: Septembet, 1987
+    date: September, 1987
     seriesinfo:
       "Article": "IEEE Communication Magazine"
   ITU-E600:

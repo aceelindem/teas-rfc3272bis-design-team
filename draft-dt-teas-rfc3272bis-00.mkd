@@ -302,7 +302,7 @@ informative:
 
 --- abstract
 
-This memo describes the principles of Traffic Engineering (TE) in the
+This document describes the principles of Traffic Engineering (TE) in the
 Internet.  The document is intended to promote better understanding
 of the issues surrounding traffic engineering in IP networks, and to
 provide a common basis for the development of traffic engineering
@@ -319,7 +319,7 @@ include references to the latest relevant work in the IETF.
 
 # Introduction {#INTRO}
 
-This memo describes the principles of Internet traffic engineering.
+This document describes the principles of Internet traffic engineering.
 The objective of the document is to articulate the general issues and
 principles for Internet traffic engineering; and where appropriate to
 provide recommendations, guidelines, and options for the development
@@ -364,7 +364,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 BCP 14 {{RFC2119}} {{RFC8174}} when, and only when, they appear in all
 capitals, as shown here.
 
-1.1. What is Internet Traffic Engineering? {#WHATTE}
+1.1. What is Internet Traffic Engineering?
 
 Internet traffic engineering is defined as that aspect of Internet
 network engineering dealing with the issue of performance evaluation
@@ -396,11 +396,11 @@ distinctive functions performed by Internet traffic engineering is
 the control and optimization of the routing function, to steer
 traffic through the network in the most effective way.
 
-Ultimately, it is the performance of the network as seen by end users
+Ultimately, it is the performance of the network as seen by end-users
 of network services that is truly paramount.  This crucial point
 should be considered throughout the development of traffic
 engineering mechanisms and policies.  The characteristics visible to
-end users are the emergent properties of the network, which are the
+end-users are the emergent properties of the network, which are the
 characteristics of the network when viewed as a whole.  A central
 goal of the service provider, therefore, is to enhance the emergent
 properties of the network while taking economic considerations into
@@ -435,7 +435,7 @@ different traffic streams.
 
 The optimization objectives of Internet traffic engineering should be
 viewed as a continual and iterative process of network performance
-improvement and not simply as a one time goal.  Traffic engineering
+improvement and not simply as a one-time goal.  Traffic engineering
 also demands continual development of new technologies and new
 methodologies for network performance enhancement.
 
@@ -530,7 +530,7 @@ evaluation problem may involve a hybrid combination of analytical
 techniques, simulation, and empirical methods.
 
 As a general rule, traffic engineering concepts and mechanisms must
-be sufficiently specific and well defined to address known
+be sufficiently specific and well-defined to address known
 requirements, but simultaneously flexible and extensible to
 accommodate unforeseen future demands.
 
@@ -555,7 +555,7 @@ not addressed in detail.  This topic may be addressed by other
 working group document(s).
 
 Although the emphasis is on intra-domain traffic engineering, in
-{{INTER}}, an overview of the high level considerations pertaining
+{{INTER}}, an overview of the high-level considerations pertaining
 to inter-domain traffic engineering will be provided.  Inter-domain
 Internet traffic engineering is crucial to the performance
 enhancement of the global Internet infrastructure.
@@ -574,7 +574,7 @@ Baseline analysis
   the actual behavior of the network.
 
 Busy hour
-: A one hour period within a specified interval of time
+: A one-hour period within a specified interval of time
   (typically 24 hours) in which the traffic load in a network
   or sub-network is greatest.
 
@@ -602,7 +602,7 @@ Constraint-based routing
   routing is applicable to traffic aggregates as well as
   flows.  It is a generalization of QoS routing.
 
-Demand side congestion management
+Demand-side congestion management
 : A congestion management scheme that addresses congestion
   problems by regulating or conditioning offered load.
 
@@ -682,7 +682,7 @@ Stability
 : An operational state in which a network does not oscillate
   in a disruptive manner from one mode to another mode.
 
-Supply side congestion management
+Supply-side congestion management
 : A congestion management scheme that provisions additional
   network resources to address existing and/or anticipated
   congestion problems.
@@ -711,7 +711,7 @@ Traffic intensity
 : A measure of traffic loading with respect to a resource
   capacity over a specified period of time.  In classical
   telephony systems, traffic intensity is measured in units of
-  Erlang.
+  Erlangs.
 
 Traffic matrix
 : A representation of the traffic demand between a set of
@@ -738,7 +738,7 @@ social activities.  Simultaneously, the delivery of Internet
 communications services has become very competitive and end-users are
 demanding very high quality service from their service providers.
 Consequently, performance optimization of large scale IP networks,
-especially public Internet backbones, have become an important
+especially public Internet backbones, has become an important
 problem.  Network performance requirements are multi-dimensional,
 complex, and sometimes contradictory; making the traffic engineering
 problem very challenging.
@@ -820,8 +820,8 @@ network elements respond to internal and external stimuli.
 
 The details of how the network provides transport services for
 packets are specified in the policies of the network administrators
-and are installed through network configuration management and policy
-based provisioning systems.  Generally, the types of services
+and are installed through network configuration management and
+policy-based provisioning systems.  Generally, the types of services
 provided by the network also depends upon the technology and
 characteristics of the network elements and protocols, the prevailing
 service and utility models, and the ability of the network
@@ -841,7 +841,7 @@ Packets contend for the use of network resources as they are conveyed
 through the network.  A network resource is considered to be
 congested if the arrival rate of packets exceed the output capacity
 of the resource over an interval of time.  Congestion may result in
-some of the arrival packets being delayed or even dropped.
+some of the arriving packets being delayed or even dropped.
 
 Congestion increases transit delays, delay variation, packet loss,
 and reduces the predictability of network services.  Clearly,
@@ -853,7 +853,7 @@ Internet traffic engineering.
 Efficient sharing of network resources by multiple traffic streams is
 a basic economic premise for packet switched networks in general and
 for the Internet in particular.  A fundamental challenge in network
-operation, especially in a large scale public IP network, is to
+operation, especially in a large-scale public IP network, is to
 increase the efficiency of resource utilization while minimizing the
 possibility of congestion.
 
@@ -906,19 +906,19 @@ Still another class of problems concerns how to characterize the
 state of the network and how to evaluate its performance under a
 variety of scenarios.  The performance evaluation problem is two-
 fold.  One aspect of this problem relates to the evaluation of the
-system level performance of the network.  The other aspect relates to
-the evaluation of the resource level performance, which restricts
+system-level performance of the network.  The other aspect relates to
+the evaluation of the resource-level performance, which restricts
 attention to the performance analysis of individual network
-resources.  In this memo, we refer to the system level
-characteristics of the network as the "macro-states" and the resource
-level characteristics as the "micro-states." The system level
+resources.  In this document, we refer to the system-level
+characteristics of the network as the "macro-states" and the
+resource-level characteristics as the "micro-states." The system-level
 characteristics are also known as the emergent properties of the
 network as noted earlier.  Correspondingly, we shall refer to the
 traffic engineering schemes dealing with network performance
 optimization at the systems level as "macro-TE" and the schemes that
 optimize at the individual resource level as "micro-TE."  Under
-certain circumstances, the system level performance can be derived
-from the resource level performance using appropriate rules of
+certain circumstances, the system-level performance can be derived
+from the resource-level performance using appropriate rules of
 composition, depending upon the particular performance measures of
 interest.
 
@@ -939,22 +939,22 @@ of Internet traffic engineering.
 Congestion is one of the most significant problems in an operational
 IP context.  A network element is said to be congested if it
 experiences sustained overload over an interval of time.  Congestion
-almost always results in degradation of service quality to end users.
-Congestion control schemes can include demand side policies and
-supply side policies.  Demand side policies may restrict access to
+almost always results in degradation of service quality to end-users.
+Congestion control schemes can include demand-side policies and
+supply-side policies.  Demand-side policies may restrict access to
 congested resources and/or dynamically regulate the demand to
-alleviate the overload situation.  Supply side policies may expand or
+alleviate the overload situation.  Supply-side policies may expand or
 augment network capacity to better accommodate offered traffic.
-Supply side policies may also re-allocate network resources by
+Supply-side policies may also re-allocate network resources by
 redistributing traffic over the infrastructure.  Traffic
 redistribution and resource re-allocation serve to increase the
 'effective capacity' seen by the demand.
 
-The emphasis of this memo is primarily on congestion management
+The emphasis of this document is primarily on congestion management
 schemes falling within the scope of the network, rather than on
 congestion management systems dependent upon sensitivity and
 adaptivity from end-systems.  That is, the aspects that are
-considered in this memo with respect to congestion management are
+considered in this document with respect to congestion management are
 those solutions that can be provided by control entities operating on
 the network and by the actions of network administrators and network
 operations systems.
@@ -980,7 +980,7 @@ context of Internet traffic engineering.
 
 1. A set of policies, objectives, and requirements (which may
    be context dependent) for network performance evaluation and
-   performance  optimization.
+   performance optimization.
 
 2. A collection of online and possibly offline tools and
    mechanisms for measurement, characterization, modeling, and
@@ -1012,11 +1012,11 @@ estimation is very useful within the realm of the solution space for
 traffic engineering.  Traffic estimates can be derived from customer
 subscription information, traffic projections, traffic models, and
 from actual empirical measurements.  The empirical measurements may
-be performed at the traffic aggregate level or at the flow level in
+be performed at the traffic-aggregate level or at the flow level in
 order to derive traffic statistics at various levels of detail.
 Measurements at the flow level or on small traffic aggregates may be
 performed at edge nodes, where traffic enters and leaves the network.
-Measurements at large traffic aggregate levels may be performed
+Measurements at large traffic-aggregate levels may be performed
 within the core of the network where potentially numerous traffic
 flows may be in transit concurrently.
 
@@ -1027,7 +1027,7 @@ demands, and to ascertain the utilization of network resources as
 traffic is routed through the network.  The routing analysis should
 capture the selection of paths through the network, the assignment of
 traffic across multiple feasible routes, and the multiplexing of IP
-traffic over traffic trunks (if such constructs exists) and over the
+traffic over traffic trunks (if such constructs exist) and over the
 underlying network infrastructure.  A network topology model is a
 necessity for routing analysis.  A network topology model may be
 extracted from network architecture documents, from network designs,
@@ -1059,33 +1059,33 @@ problems.
 
 Congestion management policies can be categorized based upon the
 following criteria (see e.g., {{YARE95}} for a more detailed taxonomy
-of congestion control schemes): (1) Response time scale which can be
+of congestion control schemes): (1) Response timescale which can be
 characterized as long, medium, or short; (2) reactive versus
 preventive which relates to congestion control and congestion
-avoidance; and (3) supply side versus demand side congestion
+avoidance; and (3) supply-side versus demand-side congestion
 management schemes.  These aspects are discussed in the following
 paragraphs.
 
-1. Congestion Management based on Response Time Scales
+1. Congestion Management based on Response Timescales
 
     * Long (weeks to months): Capacity planning works over a relatively
-      long time scale to expand network capacity based on estimates or
+      long timescale to expand network capacity based on estimates or
       forecasts of future traffic demand and traffic distribution.  Since
       router and link provisioning take time and are generally expensive,
       these upgrades are typically carried out in the weeks-to-months or
-      even years time scale.
+      even years timescale.
 
     * Medium (minutes to days): Several control policies fall within the
-      medium time scale category.  Examples include: (1) Adjusting IGP
+      medium timescale category.  Examples include: (1) Adjusting IGP
       and/or BGP parameters to route traffic away or towards certain
       segments of the network; (2) Setting up and/or adjusting some
-      explicitly routed label switched paths (ER-LSPs) in MPLS networks to
+      Explicitly Routed Label Switched Paths (ER-LSPs) in MPLS networks to
       route some traffic trunks away from possibly congested resources or
       towards possibly more favorable routes; (3) re-configuring the
       logical topology of the network to make it correlate more closely
       with the spatial traffic distribution using for example some
       underlying path-oriented technology such as MPLS LSPs, ATM PVCs, or
-      optical channel trails.  Many of these adaptive medium time scale
+      optical channel trails.  Many of these adaptive medium timescale
       response schemes rely on a measurement system that monitors changes
       in traffic distribution, traffic shifts, and network resource
       utilization and subsequently provides feedback to the online and/or
@@ -1101,7 +1101,7 @@ paragraphs.
       points of failure and may not scale as well as distributed schemes.
       Moreover, the information utilized by a centralized scheme may be
       stale and may not reflect the actual state of the network.  It is not
-      an objective of this memo to make a recommendation between
+      an objective of this document to make a recommendation between
       distributed and centralized schemes.  This is a choice that network
       administrators must make based on their specific needs.
 
@@ -1109,7 +1109,7 @@ paragraphs.
       processing functions and events on the order of several round trip
       times.  It includes router mechanisms such as passive and active
       buffer management.  These mechanisms are used to control congestion
-      and/or signal congestion to end systems so that they can adaptively
+      and/or signal congestion to end-systems so that they can adaptively
       regulate the rate at which traffic is injected into the network.  One
       of the most popular active queue management schemes, especially for
       TCP traffic, is Random Early Detection (RED) {{FLJA93}}, which supports
@@ -1119,7 +1119,7 @@ paragraphs.
       which takes into account the average queue size.  For a router that
       does not utilize explicit congestion notification (ECN) see e.g.,
       {{FLOY94}}, the marked packets can simply be dropped to signal the
-      inception of congestion to end systems.  On the other hand, if the
+      inception of congestion to end-systems.  On the other hand, if the
       router supports ECN, then it can set the ECN field in the packet
       header.  Several variations of RED have been proposed to support
       different drop precedence levels in multi-class environments {{RFC2597}},
@@ -1142,7 +1142,7 @@ paragraphs.
 
     * Reactive: reactive (recovery) congestion management policies react
       to existing congestion problems to improve it.  All the policies
-      described in the long and medium time scales above can be categorized
+      described in the long and medium timescales above can be categorized
       as being reactive especially if the policies are based on monitoring
       and identifying existing congestion problems, and on the initiation
       of relevant actions to ease a situation.
@@ -1150,19 +1150,19 @@ paragraphs.
     * Preventive: preventive (predictive/avoidance) policies take
       proactive action to prevent congestion based on estimates and
       predictions of future potential congestion problems.  Some of the
-      policies described in the long and medium time scales fall into this
+      policies described in the long and medium timescales fall into this
       category.  They do not necessarily respond immediately to existing
       congestion problems.  Instead forecasts of traffic demand and
       workload distribution are considered and action may be taken to
       prevent potential congestion problems in the future.  The schemes
-      described in the short time scale (e.g., RED and its variations, ECN,
+      described in the short timescale (e.g., RED and its variations, ECN,
       LQD, and RND) are also used for congestion avoidance since dropping
       or marking packets before queues actually overflow would trigger
       corresponding TCP sources to slow down.
 
-3. Congestion Management: Supply Side versus Demand Side Schemes
+3. Congestion Management: Supply-Side versus Demand-Side Schemes
 
-    * Supply side: supply side congestion management policies increase
+    * Supply-side: supply-side congestion management policies increase
       the effective capacity available to traffic in order to control or
       obviate congestion.  This can be accomplished by augmenting capacity.
       Another way to accomplish this is to minimize congestion by having a
@@ -1178,14 +1178,14 @@ paragraphs.
       and optical channel trails) to modify the logical topology, or by
       using some other load redistribution mechanisms.
 
-    * Demand side: demand side congestion management policies control or
+    * Demand-side: demand-side congestion management policies control or
       regulate the offered traffic to alleviate congestion problems.  For
-      example, some of the short time scale mechanisms described earlier
+      example, some of the short timescale mechanisms described earlier
       (such as RED and its variations, ECN, LQD, and RND) as well as
-      policing and rate shaping mechanisms attempt to regulate the offered
-      load in various ways.  Tariffs may also be applied as a demand side
+      policing and rate-shaping mechanisms attempt to regulate the offered
+      load in various ways.  Tariffs may also be applied as a demand-side
       instrument.  To date, however, tariffs have not been used as a means
-      of demand side congestion management within the Internet.
+      of demand-side congestion management within the Internet.
 
 In summary, a variety of mechanisms can be used to address congestion
 problems in IP networks.  These mechanisms may operate at multiple
@@ -1194,7 +1194,7 @@ time-scales.
 ##Implementation and Operational Context {#IMPCTXT}
 
 The operational context of Internet traffic engineering is
-characterized by constant change which occur at multiple levels of
+characterized by constant changes which occur at multiple levels of
 abstraction.  The implementation context demands effective planning,
 organization, and execution.  The planning aspects may involve
 determining prior sets of actions to achieve desired objectives.
@@ -1206,8 +1206,8 @@ attain and maintain desired TE goals.
 
 #Traffic Engineering Process Models {#TEPROC}
 
-This section describes a generic process model that captures the high
-level practical aspects of Internet traffic engineering in an
+This section describes a generic process model that captures the
+high-level practical aspects of Internet traffic engineering in an
 operational context.  The process model is described as a sequence of
 actions that a traffic engineer, or more generally a traffic
 engineering system, must perform to optimize the performance of an
@@ -1219,7 +1219,7 @@ process model may be enacted explicitly or implicitly, by an
 automaton and/or by a human.
 
 The traffic engineering process model is iterative {{AWD2}}.  The four
-phases of the process model described below are repeated continually.
+phases of the process model described below are continually repeated.
 
 The first phase of the TE process model is to define the relevant
 control policies that govern the operation of the network.  These
@@ -1316,9 +1316,10 @@ monitored system.
 
 Measurement in support of the TE function can occur at different
 levels of abstraction.  For example, measurement can be used to
-derive packet level characteristics, flow level characteristics, user
-or customer level characteristics, traffic aggregate characteristics,
-component level characteristics, and network wide characteristics.
+derive packet-level characteristics, flow-level characteristics,
+user-level or customerd-level characteristics, traffic-aggregate
+characteristics, component-level characteristics, and network-wide
+characteristics.
 
 ##Modeling, Analysis, and Simulation {#MODEL}
 
@@ -1371,8 +1372,8 @@ capacity.
 Routing simulators are especially useful in large networks.  A
 routing simulator may identify planned links which may not actually
 be used to route traffic by the existing routing protocols.
-Simulators can also be used to conduct scenario based and
-perturbation based analysis, as well as sensitivity studies.
+Simulators can also be used to conduct scenario-based and
+perturbation-based analysis, as well as sensitivity studies.
 Simulation results can be used to initiate appropriate actions in
 various ways.  For example, an important application of network
 simulation tools is to investigate and identify how best to make the
@@ -1394,8 +1395,8 @@ Network performance optimization is a continual process, as noted
 previously.  Performance optimization iterations may consist of
 real-time optimization sub-processes and non-real-time network
 planning sub-processes.  The difference between real-time
-optimization and network planning is primarily in the relative time-
-scale in which they operate and in the granularity of actions.  One
+optimization and network planning is primarily in the relative
+timescale in which they operate and in the granularity of actions.  One
 of the objectives of a real-time optimization sub-process is to
 control the mapping and distribution of traffic over the existing
 network infrastructure to avoid and/or relieve congestion, to assure
@@ -1404,7 +1405,7 @@ Real-time optimization is needed because random incidents such as
 fiber cuts or shifts in traffic demand will occur irrespective of how
 well a network is designed.  These incidents can cause congestion and
 other problems to manifest in an operational network.  Real-time
-optimization must solve such problems in small to medium time-scales
+optimization must solve such problems in small to medium timescales
 ranging from micro-seconds to minutes or hours.  Examples of real-
 time optimization include queue management, IGP/BGP metric tuning,
 and using technologies such as MPLS explicit LSPs to change the paths
@@ -1434,7 +1435,7 @@ network planning.
 
 Stability is an important consideration in real-time network
 performance optimization.  This aspect will be repeatedly addressed
-throughout this memo.
+throughout this document.
 
 #Historical Review and Recent Developments {#HIST}
 
@@ -1496,12 +1497,12 @@ Dynamic non-hierarchical routing (DNHR) is an example of dynamic
 routing that was introduced in the AT&T toll network in the 1980's to
 respond to time-dependent information such as regular load variations
 as a function of time.  Time-dependent information in terms of load
-may be divided into three time scales: hourly, weekly, and yearly.
+may be divided into three timescales: hourly, weekly, and yearly.
 Correspondingly, three algorithms are defined to pre-plan the routing
 tables.  The network design algorithm operates over a year-long
 interval while the demand servicing algorithm operates on a weekly
 basis to fine tune link sizes and routing tables to correct forecast
-errors on the yearly basis.  At the smallest time scale, the routing
+errors on the yearly basis.  At the smallest timescale, the routing
 algorithm is used to make limited adjustments based on daily traffic
 variations.  Network design and demand servicing are computed using
 offline calculations.  Typically, the calculations require extensive
@@ -2042,7 +2043,7 @@ conditions.  These end-to-end GoS target values are then apportioned
 to individual resource components of the reference connections for
 dimensioning purposes.
 
-##Content Distribution (#CDN}
+##Content Distribution {#CDN}
 
 The Internet is dominated by client-server interactions, especially
 Web traffic (in the future, more sophisticated media servers may
@@ -2120,7 +2121,7 @@ provides additional information on variations in actual traffic
 (i.e., perturbations from regular variations) that could not be
 predicted using historical information.  Constraint-based routing is
 an example of state-dependent TE operating in a relatively long time
-scale.  An example operating in a relatively short time scale is a
+scale.  An example operating in a relatively short timescale is a
 load-balancing algorithm described in {{MATE}}.
 
 The state of the network can be based on parameters such as
@@ -2251,7 +2252,7 @@ actions.
 
 #Recommendations for Internet Traffic Engineering {#RECO}
 
-This section describes high level recommendations for traffic
+This section describes high-level recommendations for traffic
 engineering in the Internet.  These recommendations are presented in
 general terms.
 
@@ -2362,7 +2363,7 @@ Adequate measures must also be taken to protect the network from
 vulnerabilities that originate from security breaches and other
 impairments within the traffic engineering system.
 
-The remainder of this section will focus on some of the high level
+The remainder of this section will focus on some of the high-level
 functional recommendations for traffic engineering.
 
 ##Routing Recommendations {#ROUTEREC}
@@ -2515,7 +2516,7 @@ functions should aim to map the traffic onto the network
 infrastructure to minimize congestion.  If the total traffic load
 cannot be accommodated, or if the routing and mapping functions
 cannot react fast enough to changing traffic conditions, then a
-traffic mapping system may rely on short time scale congestion
+traffic mapping system may rely on short timescale congestion
 control mechanisms (such as queue management, scheduling, etc.) to
 mitigate congestion.  Thus, mechanisms that perform the traffic
 mapping functions should complement existing congestion control
@@ -2539,8 +2540,8 @@ the statistics collected.  The mechanisms for statistical data
 acquisition should also be able to scale as the network evolves.
 
 Traffic statistics may be classified according to long-term or
-short-term time scales.  Long-term time scale traffic statistics are
-very useful for traffic engineering.  Long-term time scale traffic
+short-term timescales.  Long-term timescale traffic statistics are
+very useful for traffic engineering.  Long-term timescale traffic
 statistics may capture or reflect periodicity in network workload
 (such as hourly, daily, and weekly variations in traffic profiles) as
 well as traffic trends.  Aspects of the monitored traffic statistics
@@ -2755,7 +2756,7 @@ protection options follow.
   plentiful and cheap, then this option might become quite viable
   and attractive in IP networks.
 
-##Traffic Engineering in Diffserv Environments (#TEDIFFSRV}
+##Traffic Engineering in Diffserv Environments {#TEDIFFSRV}
 
 This section provides an overview of the traffic engineering features
 and recommendations that are specifically pertinent to Differentiated
@@ -3012,9 +3013,9 @@ exhaustive.
 Currently, service providers apply many of the traffic engineering
 mechanisms discussed in this document to optimize the performance of
 their IP networks.  These techniques include capacity planning for
-long time scales, routing control using IGP metrics and MPLS for
-medium time scales, the overlay model also for medium time scales,
-and traffic management mechanisms for short time scale.
+long timescales, routing control using IGP metrics and MPLS for
+medium timescales, the overlay model also for medium timescales,
+and traffic management mechanisms for short timescale.
 
 When a service provider plans to build an IP network, or expand the
 capacity of an existing network, effective capacity planning should

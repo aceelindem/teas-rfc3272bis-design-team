@@ -1041,8 +1041,8 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
           During congestion (but before the queue is filled), the RED
           scheme chooses arriving packets to "mark" according to a
           probabilistic algorithm which takes into account the average
-          queue size.  For a router that does not utilize explicit
-          congestion notification (ECN) see e.g., [FLOY94], the marked
+          queue size.  For a router that does not utilize Explicit
+          Congestion Notification (ECN) see e.g., [FLOY94], the marked
           packets can simply be dropped to signal the inception of
           congestion to end-systems.  On the other hand, if the router
           supports ECN, then it can set the ECN field in the packet
@@ -1474,23 +1474,23 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    routes.
 
    There are three main types of dynamic routing in the telephone
-   network.  They are time-dependent routing, state-dependent routing
-   (SDR), and event dependent routing (EDR).
+   network.  They are time-dependent routing, State-Dependent Routing
+   (SDR), and Event-Dependent Routing (EDR).
 
    In time-dependent routing, regular variations in traffic loads (such
    as time of day or day of week) are exploited in pre-planned routing
    tables.  In state-dependent routing, routing tables are updated
    online according to the current state of the network (e.g., traffic
-   demand, utilization, etc.).  In event dependent routing, routing
+   demand, utilization, etc.).  In event-dependent routing, routing
    changes are incepted by events (such as call setups encountering
    congested or blocked links) whereupon new paths are searched out
    using learning models.  EDR methods are real-time adaptive, but they
    do not require global state information as does SDR.  Examples of EDR
-   schemes include the dynamic alternate routing (DAR) from BT, the
-   state-and-time dependent routing (STR) from NTT, and the success-to-
-   the-top (STT) routing from AT&T.
+   schemes include the Dynamic Alternate Routing (DAR) from BT, the
+   State-and-Time dependent Routing (STR) from NTT, and the Success-to-
+   The-Top (STT) routing from AT&T.
 
-   Dynamic non-hierarchical routing (DNHR) is an example of dynamic
+   Dynamic Non-Hierarchical Routing (DNHR) is an example of dynamic
    routing that was introduced in the AT&T toll network in the 1980's to
    respond to time-dependent information such as regular load variations
    as a function of time.  Time-dependent information in terms of load
@@ -1531,7 +1531,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    the importance of performance optimization and service
    differentiation.
 
-   In terms of traffic management, the Internet has been a best effort
+   In terms of traffic management, the Internet has been a best-effort
    service environment until recently.  In particular, very limited
    traffic management capabilities existed in IP networks to provide
    differentiated queue management and scheduling services to packets
@@ -1648,9 +1648,9 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    equal-cost paths is usually performed in one of two ways: (1) packet-
    based in a round-robin fashion, or (2) flow-based using hashing on
    source and destination IP addresses and possibly other fields of the
-   IP header.  The first approach can easily cause out- of-order packets
+   IP header.  The first approach can easily cause out-of-order packets
    while the second approach is dependent upon the number and
-   distribution of flows.  Flow-based load sharing may be unpredictable
+   distribution of flows.  Flow-based load-sharing may be unpredictable
    in an enterprise network where the number of flows is relatively
    small and less heterogeneous (for example, hashing may not be
    uniform), but it is generally effective in core public networks where
@@ -1661,7 +1661,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    possible among the equal-cost paths independent of the congestion
    status of each path.  As a result, given two equal-cost paths, it is
    possible that one of the paths will be more congested than the other.
-   Another drawback of ECMP is that load sharing cannot be achieved on
+   Another drawback of ECMP is that load-sharing cannot be achieved on
    multiple paths which have non-identical costs.
 
 4.2.5.  Nimrod
@@ -1669,7 +1669,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    Nimrod is a routing system developed to provide heterogeneous service
    specific routing in the Internet, while taking multiple constraints
    into account [RFC1992].  Essentially, Nimrod is a link state routing
-   protocol which supports path oriented packet forwarding.  It uses the
+   protocol which supports path-oriented packet forwarding.  It uses the
    concept of maps to represent network connectivity and services at
    multiple levels of abstraction.  Mechanisms are provided to allow
    restriction of the distribution of routing information.
@@ -1750,7 +1750,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
 
    Unlike QoS routing (for example, see [RFC2386] and [MA]) which
    generally addresses the issue of routing individual traffic flows to
-   satisfy prescribed flow based QoS requirements subject to network
+   satisfy prescribed-flow based QoS requirements subject to network
    resource availability, constraint-based routing is applicable to
    traffic aggregates as well as flows and may be subject to a wide
    variety of constraints which may include policy restrictions.
@@ -1816,14 +1816,14 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    concurrently.
 
    A notable feature of the Integrated Services model is that it
-   requires explicit signaling of QoS requirements from end systems to
+   requires explicit signaling of QoS requirements from end-systems to
    routers [RFC2753].  The Resource Reservation Protocol (RSVP) performs
    this signaling function and is a critical component of the Integrated
    Services model.  The RSVP protocol is described next.
 
 4.5.2.  RSVP
 
-   RSVP is a soft state signaling protocol [RFC2205].  It supports
+   RSVP is a soft-state signaling protocol [RFC2205].  It supports
    receiver initiated establishment of resource reservations for both
    multicast and unicast flows.  RSVP was originally developed as a
    signaling protocol within the integrated services framework for
@@ -1836,8 +1836,8 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    traffic which the sender will generate.  The PATH message contains:
    (1) a sender Tspec specifying the characteristics of the traffic, (2)
    a sender Template specifying the format of the traffic, and (3) an
-   optional Adspec which is used to support the concept of one pass with
-   advertising" (OPWA) [RFC2205].  Every intermediate router along the
+   optional Adspec which is used to support the concept of One Pass With
+   Advertising" (OPWA) [RFC2205].  Every intermediate router along the
    path forwards the PATH Message to the next hop determined by the
    routing protocol.  Upon receiving a PATH Message, the receiver
    responds with a RESV message which includes a flow descriptor used to
@@ -1893,7 +1893,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
 
    The IETF Diffserv working group has defined a Differentiated Services
    field in the IP header (DS field).  The DS field consists of six bits
-   of the part of the IP header formerly known as TOS octet.  The DS
+   of the part of the IP header formerly known as the TOS octet.  The DS
    field is used to indicate the forwarding treatment that a packet
    should receive at a node [RFC2474].  The Diffserv working group has
    also standardized a number of Per-Hop Behavior (PHB) groups.  Using
@@ -1922,19 +1922,19 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    re-marked according to existing agreements between the domains.
 
    Differentiated Services allows only a finite number of service
-   classes to be indicated by the DS field.  The main advantage of the
+   classes to be specified by the DS field.  The main advantage of the
    Diffserv approach relative to the Intserv model is scalability.
    Resources are allocated on a per-class basis and the amount of state
    information is proportional to the number of classes rather than to
    the number of application flows.
 
    It should be obvious from the previous discussion that the Diffserv
-   model essentially deals with traffic management issues on a per hop
+   model essentially deals with traffic management issues on a per-hop
    basis.  The Diffserv control model consists of a collection of micro-
    TE control mechanisms.  Other traffic engineering capabilities, such
    as capacity management (including routing control), are also required
    in order to deliver acceptable service quality in Diffserv networks.
-   The concept of Per Domain Behaviors has been introduced to better
+   The concept of Per-Domain Behaviors has been introduced to better
    capture the notion of differentiated services across a complete
    domain [RFC3086].
 
@@ -1945,8 +1945,8 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    Internet routing model and enhances packet forwarding and path
    control [RFC3031].
 
-   At the ingress to an MPLS domain, label switching routers (LSRs)
-   classify IP packets into forwarding equivalence classes (FECs) based
+   At the ingress to an MPLS domain, Label Switching Routers (LSRs)
+   classify IP packets into Forwarding Equivalence Classes (FECs) based
    on a variety of factors, including, e.g., a combination of the
    information carried in the IP header of the packets and the local
    routing information maintained by the LSRs.  An MPLS label is then
@@ -1986,7 +1986,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    routing to be implemented efficiently in IP networks [AWD2].  The
    requirements for traffic engineering over MPLS are described in
    [RFC2702].  Extensions to RSVP to support instantiation of explicit
-   LSP are discussed in [RFC3209].  Extensions to LDP, known as CR-LDP,
+   LSPs are discussed in [RFC3209].  Extensions to LDP, known as CR-LDP,
    to support explicit LSPs are presented in [RFC3212].
 
 4.5.5.  IP Performance Metrics
@@ -2044,7 +2044,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    meter from a manager include flow specification, meter control
    parameters, and sampling techniques.  The instructions received by a
    meter reader from a manager include the address of the meter whose
-   date is to be collected, the frequency of data collection, and the
+   data is to be collected, the frequency of data collection, and the
    types of flows to be collected.
 
 4.5.7.  Endpoint Congestion Management
@@ -2106,22 +2106,22 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    They are essential for network internal design and operation as well
    as for component performance specification.
 
-   GoS is different from quality of service (QoS) in the ITU framework.
+   GoS is different from Quality of Service (QoS) in the ITU framework.
    QoS is the performance perceivable by a telecommunication service
-   user and expresses the user's degree of satisfaction of the service.
-   QoS parameters focus on performance aspects observable at the service
-   access points and network interfaces, rather than their causes within
-   the network.  GoS, on the other hand, is a set of network oriented
-   measures which characterize the adequacy of a group of resources
-   under specified conditions.  For a network to be effective in serving
-   its users, the values of both GoS and QoS parameters must be related,
-   with GoS parameters typically making a major contribution to the QoS.
+   user and expresses the user's degree of satisfaction with the
+   service.  QoS parameters focus on performance aspects observable at
+   the service access points and network interfaces, rather than their
+   causes within the network.  GoS, on the other hand, is a set of
+   network-oriented measures which characterize the adequacy of a group
+   of resources under specified conditions.  For a network to be
+   effective in serving its users, the values of both GoS and QoS
+   parameters must be related, with GoS parameters typically making a
+   major contribution to the QoS.
 
    Recommendation E.600 stipulates that a set of GoS parameters must be
    selected and defined on an end-to-end basis for each major service
    category provided by a network to assist the network provider with
    improving efficiency and effectiveness of the network.  Based on a
-   selected set of reference connections, suitable target values are
 
 
 
@@ -2130,6 +2130,7 @@ Farrel                 Expires September 21, 2019              [Page 38]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
+   selected set of reference connections, suitable target values are
    assigned to the selected GoS parameters under normal and high load
    conditions.  These end-to-end GoS target values are then apportioned
    to individual resource components of the reference connections for
@@ -2138,10 +2139,10 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
 4.7.  Content Distribution
 
    The Internet is dominated by client-server interactions, especially
-   Web traffic (in the future, more sophisticated media servers may
+   web traffic (in the future, more sophisticated media servers may
    become dominant).  The location and performance of major information
    servers has a significant impact on the traffic patterns within the
-   Internet as well as on the perception of service quality by end
+   Internet as well as on the perception of service quality by end-
    users.
 
    A number of dynamic load balancing techniques have been devised to
@@ -2153,7 +2154,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    relative performance of different networks, and the relative
    performance of different parts of a network.  This process of
    assignment of distributed servers to clients is called Traffic
-   Directing.  It functions at the application layer.
+   Directing.  It is an application layer function.
 
    Traffic Directing schemes that allocate servers in multiple
    geographically dispersed locations to clients may require empirical
@@ -2177,7 +2178,6 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    constructed based on traffic engineering styles and views as listed
    below:
 
-   o  Time-dependent vs State-dependent vs Event-dependent
 
 
 
@@ -2185,6 +2185,8 @@ Farrel                 Expires September 21, 2019              [Page 39]
 
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
+
+   o  Time-dependent vs State-dependent vs Event-dependent
 
    o  Offline vs Online
 
@@ -2232,8 +2234,6 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    The state of the network can be based on parameters such as
    utilization, packet delay, packet loss, etc.  These parameters can be
    obtained in several ways.  For example, each router may flood these
-   parameters periodically or by means of some kind of trigger to other
-   routers.  Another approach is for a particular router performing
 
 
 
@@ -2242,6 +2242,8 @@ Farrel                 Expires September 21, 2019              [Page 40]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
+   parameters periodically or by means of some kind of trigger to other
+   routers.  Another approach is for a particular router performing
    adaptive TE to send probe packets along a path to gather the state of
    that path.  Still another approach is for a management system to
    gather relevant information from network elements.
@@ -2262,10 +2264,10 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    state-dependent TE models typically use available-link-bandwidth
    (ALB) flooding for TE path selection, event-dependent TE methods do
    not require ALB flooding.  Rather, event-dependent TE methods
-   typically search out capacity by learning models, as in the success-
-   to-the-top (STT) method.  ALB flooding can be resource intensive,
+   typically search out capacity by learning models, as in the Success-
+   to-The-Top (STT) method.  ALB flooding can be resource intensive,
    since it requires link bandwidth to carry LSAs, processor capacity to
-   process LSAs, and the overhead can limit area/autonomous system (AS)
+   process LSAs, and the overhead can limit area/Autonomous System (AS)
    size.  Modeling results suggest that event-dependent TE methods could
    lead to a reduction in ALB flooding overhead without loss of network
    throughput performance [ASH3].
@@ -2286,8 +2288,6 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    computation is geared toward relative simple and fast calculations to
    select routes, fine-tune the allocations of resources, and perform
    load balancing.
-
-
 
 
 
@@ -2533,7 +2533,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    constraints into account during route selection while maintaining
    stability.
 
-   Traditional shortest path first (SPF) interior gateway protocols are
+   Traditional Shortest Path First (SPF) interior gateway protocols are
    based on shortest path algorithms and have limited control
    capabilities for traffic engineering [RFC2702], [AWD2].  These
    limitations include :
@@ -2542,7 +2542,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
        network constraints and traffic characteristics into account
        during route selection.  For example, since IGPs always use the
        shortest paths (based on administratively assigned link metrics)
-       to forward traffic, load sharing cannot be accomplished among
+       to forward traffic, load-sharing cannot be accomplished among
        paths of different costs.  Using shortest paths to forward
        traffic conserves network resources, but may cause the following
        problems: 1) If traffic from a source to a destination exceeds
@@ -2561,7 +2561,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
        sharing of traffic among equal cost paths between two nodes.
        However, ECMP attempts to divide the traffic as equally as
        possible among the equal cost shortest paths.  Generally, ECMP
-       does not support configurable load sharing ratios among equal
+       does not support configurable load-sharing ratios among equal
        cost paths.  The result is that one of the paths may carry
        significantly more traffic than other paths because it may also
        carry traffic from other sources.  This situation can result in
@@ -2599,7 +2599,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    such as MPLS.
 
    Constraint-based routing can also be used as a way to redistribute
-   traffic onto the infrastructure (even for best effort traffic).  For
+   traffic onto the infrastructure (even for best-effort traffic).  For
    example, if the bandwidth requirements for path selection and
    reservable bandwidth attributes of network links are appropriately
    defined and configured, then congestion problems caused by uneven
@@ -2981,7 +2981,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    Services (Diffserv) [RFC2475] capable IP networks.
 
    Increasing requirements to support multiple classes of traffic, such
-   as best effort and mission critical data, in the Internet calls for
+   as best-effort and mission-critical data, in the Internet calls for
    IP networks to differentiate traffic according to some criteria, and
    to accord preferential treatment to certain types of traffic.  Large
    numbers of flows can be aggregated into a few behavior aggregates
@@ -3053,7 +3053,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    can then be routed and protected/restored in a class dependent
    manner, according to specific policies.
 
-   Performing traffic engineering on a per class basis may require
+   Performing traffic engineering on a per-class basis may require
    certain per-class parameters to be distributed.  Note that it is
    common to have some classes share some aggregate constraint (e.g.,
    maximum bandwidth requirement) without enforcing the constraint on
@@ -3142,11 +3142,10 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    number of attributes and capabilities (e.g., route filtering) that
    can be used for inter-domain traffic engineering.  More specifically,
    BGP permits the control of routing information and traffic exchange
-   between Autonomous Systems (AS's) in the Internet.  BGP incorporates
-   a sequential decision process which calculates the degree of
-   preference for various routes to a given destination network.  There
-   are two fundamental aspects to inter-domain traffic engineering using
-   BGP:
+   between Autonomous Systems (ASs) in the Internet.  BGP incorporates a
+   sequential decision process which calculates the degree of preference
+   for various routes to a given destination network.  There are two
+   fundamental aspects to inter-domain traffic engineering using BGP:
 
    o  Route Redistribution: controlling the import and export of routes
       between AS's, and controlling the redistribution of routes between
@@ -3186,6 +3185,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    "closest exit" strategy, which offloads interdomain traffic at the
    nearest outbound peer point towards the destination autonomous
    system.  Most methods of manipulating the point at which inbound
+   traffic enters a network from an EBGP peer (inconsistent route
 
 
 
@@ -3194,7 +3194,6 @@ Farrel                 Expires September 21, 2019              [Page 57]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
-   traffic enters a network from an EBGP peer (inconsistent route
    announcements between peering points, AS pre-pending, and sending
    MEDs) are either ineffective, or not accepted in the peering
    community.
@@ -3242,6 +3241,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    inside the domain of the peering partner.  This, in turn, will affect
    the intra-domain TE due to changes in the spatial distribution of
    traffic.  Therefore, it is mutually beneficial for peering partners
+   to coordinate with each other before attempting any policy changes
 
 
 
@@ -3250,7 +3250,6 @@ Farrel                 Expires September 21, 2019              [Page 58]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
-   to coordinate with each other before attempting any policy changes
    that may result in significant shifts in inter-domain traffic.  In
    certain contexts, this coordination can be quite challenging due to
    technical and non- technical reasons.
@@ -3298,6 +3297,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    domain TE approaches/tools have been proposed
    [RR94][FT00][FT01][WANG].  Such approaches/tools take traffic matrix,
    network topology, and network performance objective(s) as input, and
+   produce some link metrics and possibly some unequal load-sharing
 
 
 
@@ -3306,7 +3306,6 @@ Farrel                 Expires September 21, 2019              [Page 59]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
-   produce some link metrics and possibly some unequal load-sharing
    ratios to be set at the head-end routers of some ECMPs as output.
    These new progresses open new possibility for intra-domain TE with
    IGP to be done in a more systematic way.
@@ -3354,6 +3353,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
 
    In an MPLS domain, a traffic matrix can also be estimated by
    monitoring the traffic on LSPs.  Such traffic statistics can be used
+   for a variety of purposes including network planning and network
 
 
 
@@ -3362,7 +3362,6 @@ Farrel                 Expires September 21, 2019              [Page 60]
 Internet-Draft   Overview and Principles of Internet TE       March 2019
 
 
-   for a variety of purposes including network planning and network
    optimization.  Current practice suggests that deploying an MPLS
    network consisting of hundreds of routers and thousands of LSPs is
    feasible.  In summary, recent deployment experience suggests that
@@ -3410,6 +3409,7 @@ Internet-Draft   Overview and Principles of Internet TE       March 2019
    utilization by creating more levels of BGP metrics between peers,
    allowing for more granularity in selecting the exit points for
    traffic bound for a dual homed customer on a peer's network.
+
 
 
 

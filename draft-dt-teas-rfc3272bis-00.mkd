@@ -11,7 +11,6 @@ category: info
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, comments]
 
-
 author:
   -
        ins: A. Farrel
@@ -48,36 +47,13 @@ informative:
   RFC3272:
   RFC3469:
   RFC3630:
+  RFC4124:
   RFC4271:
   RFC5305:
   RFC7679:
   RFC7680:
   RFC8174:
   ASH3: I-D.ietf-tewg-qos-routing
-  DIFF-TE:
-    target: https://datatracker.ietf.org/doc/draft-lefaucheur-diff-te-reqts/
-    title: Requirements for support of Diff-Serv-aware MPLS Traffic Engineering
-    author:
-      -
-        ins: F. Le Faucheur
-        name: Francois Le Faucher
-      -
-        ins: T. Nadeau
-        name: Thomas Nadeau
-      -
-        ins: A. Chiu
-        name: Angela Chiu
-      -
-        ins: W. Townsend
-        name: William Townsend
-      -
-        ins: D. Skalecki
-        name: Darek Skalecki
-    date: 2000-07
-    seriesinfo:
-      "Internet-Draft": draft-lefaucheur-diff-te-reqts-00, work in progress"
-    format:
-      TXT: https://www.ietf.org/archive/id/draft-lefaucheur-diff-te-reqts-00.txt
   ASH2:
     title: Dynamic Routing in Telecommunications Networks
     author:
@@ -2795,7 +2771,7 @@ provide better distribution of the aggregate traffic load over the
 network resources.  (See {{RFC3270}} for detailed mechanisms to
 support aggregate traffic engineering.)  The latter case is discussed
 below since it is specific to the Diffserv environment, with so
-called Diffserv-aware traffic engineering {{DIFF-TE}}.
+called Diffserv-aware traffic engineering {{RFC4124}}.
 
 For some Diffserv networks, it may be desirable to control the
 performance of some service classes by enforcing certain
@@ -2854,7 +2830,7 @@ a class-type, one may implement some priority policy which assigns
 higher preemption priority to AF1-based traffic trunks over AF2-based
 ones, vice versa, or the same priority.
 
-See {{DIFF-TE}} for detailed requirements on Diffserv-aware traffic
+See {{RFC4124}} for detailed requirements on Diffserv-aware traffic
 engineering.
 
 ##Network Controllability {#CONTROL}

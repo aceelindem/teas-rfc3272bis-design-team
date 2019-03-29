@@ -7,10 +7,8 @@ docname: draft-dt-teas-rfc3272bis-00
 wg: TEAS Working Group
 category: info
 
-
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, comments]
-
 
 author:
   -
@@ -675,10 +673,15 @@ QoS routing
 : Class of routing systems that selects paths to be used by a
   flow based on the QoS requirements of the flow.
 
-Service Level Agreement
+Service Level Agreement(SLA)
 : A contract between a provider and a customer that guarantees
   specific levels of performance and reliability at a certain
   cost.
+
+Service Level Objective(SLO)
+: A service-level objective (SLO) is a key element of a SLA between a provider and a customer. 
+  SLOs are agreed upon as a means of measuring the performance of the Service Provider and are outlined 
+  as a way of avoiding disputes between the two parties based on misunderstanding. 
 
 Stability
 : An operational state in which a network does not oscillate

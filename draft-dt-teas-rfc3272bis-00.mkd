@@ -225,6 +225,19 @@ informative:
     date: 1994
     seriesinfo:
       "Proceedings": "ITS'94, Rio de Janeiro, Brazil"
+  AJ19:
+    title: Data mining approach for predicting the daily
+           Internet data traffic of a smart university
+    author:
+      -
+        ins: A. Adekitan
+      -
+        ins: J. Abolade
+      -
+        ins: O. Shobayo
+    date: 2019
+    seriesinfo:
+      "Journal of Big Data, 2019, Volume 6, Number 1, Page 1."
   SLDC98:
     title: Design Considerations for Supporting TCP with Per-flow Queueing
     author:
@@ -2094,6 +2107,12 @@ adapt to random variations in traffic or changing network conditions.
 An example of a time-dependent algorithm is a global centralized
 optimizer where the input to the system is a traffic matrix and
 multi-class QoS requirements as described {{MR99}}.
+Another example of such methodology is recently emerging with popularity of data
+mining applicability to Internet traffic {{AJ19}}. Data mining enables the use
+of various machine learning algorithms to identify patterns within historically
+collected datasets about Internet traffic, and to extract such valuable
+information in order to guide the decision making, and improve efficiency and
+productivity of operational processes.
 
 State-dependent TE adapts the routing plans for packets based on the
 current state of the network.  The current state of the network
@@ -2110,8 +2129,11 @@ obtained in several ways.  For example, each router may flood these
 parameters periodically or by means of some kind of trigger to other
 routers.  Another approach is for a particular router performing
 adaptive TE to send probe packets along a path to gather the state of
-that path.  Still another approach is for a management system to
-gather relevant information from network elements.
+that path. {{?RFC6374}} defines protocol extensions to collect such performance
+measurements from MPLS networks. 
+Other approach, is for a management system to
+gather the relevant information directly from network elements using
+telemetry data collection "pub/sub" techniques {{?RFC7923}}.
 
 Expeditious and accurate gathering and distribution of state
 information is critical for adaptive TE due to the dynamic nature of
@@ -2169,8 +2191,11 @@ Distributed control determines route selection by each router
 autonomously based on the routers view of the state of the network.
 The network state information may be obtained by the router using a
 probing method or distributed by other routers on a periodic basis
-using link state advertisements.  Network state information may also
-be disseminated under exceptional conditions.
+using link state advertisements. Network state information may also be
+disseminated under exceptional conditions.  Examples of protocol
+extensions used to advertise network link state information are defined
+in {{?RFC5305}}, {{?RFC6119}}, {{?RFC7471}}, {{?RFC7810}}, and
+{{?RFC8571}}.  
 
 ##Local Versus Global {#LOCAL}
 
@@ -2214,21 +2239,27 @@ purposes, however.
 
 Closed-loop traffic engineering control is where control action
 utilizes feedback information from the network state.  The feedback
-information may be in the form of historical information or current
-measurement.
+information may be in the form of historical data, current
+network state measurement, and signaling events relayed back from
+the network elements as described in {{?RFC8231}}.
 
 ##Tactical vs Strategic {#TACTIC}
 
 Tactical traffic engineering aims to address specific performance
-problems (such as hot-spots) that occur in the network from a
-tactical perspective, without consideration of overall strategic
-imperatives.  Without proper planning and insights, tactical TE tends
-to be ad hoc in nature.
+problems (such as hot-spots) that occur in the network from a tactical
+perspective in a reactive manner, without consideration of overall
+strategic imperatives. Without proper planning and insights, tactical TE
+tends to be ad hoc in nature.
 
 Strategic traffic engineering approaches the TE problem from a more
 organized and systematic perspective, taking into consideration the
 immediate and longer term consequences of specific policies and
 actions.
+
+Both techniques can coexit together. In practice however, the latter is
+more suited in the long run since it attempts to prevent the network
+problem state from transpiring and risking any tactical reactive
+measures from being implemented too late.
 
 #Recommendations for Internet Traffic Engineering {#RECO}
 
